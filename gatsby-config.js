@@ -1,8 +1,18 @@
 module.exports = {
   siteMetadata: {
-    title: 'Frontend Masters Gatsby Workshop',
+    title: 'National Parks in Washington',
     description:
-      'A site we built together during a full-day Frontend Masters Gatsby workshop!',
+      'A photo blog of national parks in Washington.',
   },
-  plugins: ['gatsby-plugin-emotion', 'gatsby-plugin-react-helmet'],
+  plugins: ['gatsby-plugin-emotion', 
+  'gatsby-plugin-react-helmet',
+  {
+    resolve: 'gatsby-mdx',
+    options: {
+      defaultLayouts: {
+        default: require.resolve('./src/components/layouts.js'),
+      }
+    },
+  },
+],
 };
